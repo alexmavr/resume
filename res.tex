@@ -1,0 +1,115 @@
+%% start of file `template.tex'.
+%
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{banking}                      % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+
+% adjust the page margins
+\usepackage[scale=0.81]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\name{Alex}{Mavrogiannis} 
+ % optional, remove / comment the line if not wanted
+\social[github]{alexmavr}
+\email{almavrog@gmail.com}                                                     
+\phone[mobile]{+1~(650)~646~8654}                   % optional, remove / comment 
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+\section{Experience}
+
+\cventry{May 2019 -- Present}{Senior Software Engineer}{Coinbase Global, Inc}{San Francisco, CA}{}{
+Senior Software Engineer in Coinbase Custody
+}
+
+\cventry{Feb 2016 -- May 2019}{Senior Software Engineer}{Docker, Inc}{San Francisco, CA}{}{Technical Lead, Container Orchestration Group
+\begin{itemize}
+\item Conceptualized, designed and implemented Docker's cluster federation strategy for Multi-Cloud and Edge workloads.
+\item Prototyped, designed and implemented the integration of Kubernetes into the Docker Enterprise Platform.
+\item Day 1 Keynote speaker at DockerCon US 2018 and DockerCon EU 2017.
+\item Designed and implemented key features of Docker Enterprise: Authentication, Role-Based Access Control, security hardening, system health and lifecycle management, multi-orchestration, Swarm integration, resource constraints, certificate management.
+\end{itemize}}
+
+\cventry{May 2015 -- August 2015}{Software Engineering Intern}{Google, Inc}{Mountain View, CA}{}{
+Intern at the Borg team, working on Kubernetes and resource monitoring components of Google Cloud Platform.
+\begin{itemize}
+\item Designed and implemented the Kubernetes Heapster metrics aggregation pipeline and Kubedash, a monitoring and notification dashboard for Kubernetes.
+\item Presented the Kubernetes metrics pipeline at LinuxCon Seattle 2015.
+\end{itemize}
+}
+
+\cventry{Sept 2014 -- Dec 2015}{Graduate Research Assistant}{Carnegie Mellon University}{Moffett Field, CA}{}{Designed and developed a multi-user collaboration plugin based on Git for VisTrails, a scientific workflow design tool. The project was supervised by Prof. Jia Zhang, sponsored by the NSF and consumed by NASA Earth Science.
+}
+
+\section{Education}
+\cventry{Sept 2014 -- Dec 2015}{Master of Science, Software Engineering}{Carnegie Mellon University}{}{}{}
+\cventry{Nov 2009 -- Aug 2014}{Diploma in Electrical and Computer Engineering}{National Technical University of Athens}{}{}{\textbf{Thesis:} On the Dependability of Transient Neuron Simulations}
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%\clearpage
+%-----       letter       ---------------------------------------------------------
+% recipient data
+%\recipient{Company Recruitment team}{Company, Inc.\\123 somestreet\\some city}
+%\date{January 01, 1984}
+%\opening{Dear Sir or Madam,}
+%\closing{Yours faithfully,}
+%\enclosure[Attached]{curriculum vit\ae{}}          % use an optional argument to use a string other than "Enclosure", or redefine \enclname
+%\makelettertitle
+
+%Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper neque sit amet lectus facilisis sed luctus nisl iaculis. Vivamus at neque arcu, sed 
+%\makeletterclosing
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+
+\section{Publications}
+\cventry{}{Kokolis, A., Mavrogiannis, A, Rodopoulos, D., Strydis, C., Soudris, D.}{Runtime Interval Optimization and Dependable Performance  for Application-Level Checkpointing}{}{}{Design, Automation and Test in Europe Conference and Exhibition 2016}{}
+
+
+\section{Technical Skills}
+\cvitem{Programming}{\fbox{Go, Python} C/C++, Javascript, Java, Bash,  Matlab, Haskell, OCaml, Prolog}
+\cvitem{Tools/Frameworks}{\fbox{Docker, Kubernetes}, Git, Hadoop, Wireshark, Flex, Bison, AWS, GCE, Azure, LLVM, Django, Flask, Node.js, Angular.js, d3.js, Undertow, OpenMP, Qt}
+
+\cvdoubleitem{Markup/Styling}{HTML, CSS, \LaTeX}{Storage}{etcd, boltdb, MySQL, SQLite, RethinkDB}
+\cvdoubleitem{Operating Systems}{Linux, Unix, Windows}{Networking}{TCP/IP, HTTP, DNS}
+
+
+\end{document}
+
+%% end of file `template.tex'.
+\grid
